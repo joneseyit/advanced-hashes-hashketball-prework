@@ -163,7 +163,7 @@ def player_numbers(team)
 
   game_hash.each do |place, team_data|
     if game_hash[place].has_value?(team)
-      game_hash[place][:players].map do |player, player_data|
+      return game_hash[place][:players].map do |player, player_data|
         # binding.pry
          game_hash[place][:players][player][:number]
       end
