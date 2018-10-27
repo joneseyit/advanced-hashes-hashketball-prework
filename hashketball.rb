@@ -160,12 +160,11 @@ end
 
 def player_numbers(team)
   #how to use map in this method
-  numbers_array = []
   game_hash.each do |place, team_data|
     if game_hash[place].has_value?(team)
-      game_hash[place][:players].map do |player, player_data|
+      numbers_array = game_hash[place][:players].map do |player, player_data|
         # binding.pry
-         numbers_array << game_hash[place][:players][player][:number]
+         game_hash[place][:players][player][:number]
       end
     end
   end
